@@ -1,0 +1,154 @@
+html,
+body,
+ul,
+li,
+button,
+input,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #253757; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.header {
+  height: 800px;
+  background-color: #008aff;
+  border-radius: 0 0 0 200px;
+  position: relative;
+  padding: 52px 227px 0;
+  color: white; }
+  .header__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 164px; }
+  .header__text {
+    max-width: 460px; }
+  .header__heading {
+    max-width: 490px;
+    font-size: 64px;
+    line-height: 68px;
+    letter-spacing: -2px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 32px; }
+  .header__info {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 56px; }
+
+.nav {
+  text-transform: uppercase;
+  width: 100%; }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    width: 100%; }
+  .nav__item {
+    margin-left: 64px; }
+  .nav__item:last-child {
+    margin-left: auto;
+    margin-right: 0; }
+  .nav__link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3px; }
+    .nav__link:hover {
+      color: #ff9c8e;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60px;
+  height: 28px;
+  background-image: url(../images/logo/dia-logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/slider/Slider-first.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 687px;
+  height: 680px; }
+  .slider__button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 66px;
+    cursor: pointer; }
+    .slider__button:focus {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+      outline: none; }
+    .slider__button--left {
+      left: 42px; }
+    .slider__button--right {
+      left: 88px; }
+  .slider__intro {
+    position: absolute;
+    bottom: 48px;
+    left: 144px;
+    max-width: 264px; }
+  .slider__name {
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase; }
+  .slider__info {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 140%; }
+
+.button {
+  width: 226px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #ff9c8e;
+  border-radius: 64px;
+  color: white;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  outline: none; }
+  .button:hover {
+    background-color: white;
+    color: #ff9c8e; }
+
+body {
+  background: #e5e5e5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/*# sourceMappingURL=main.css.map */
