@@ -19,6 +19,17 @@ h6 {
   line-height: 1.5;
   color: #253757; }
 
+a {
+  text-decoration: none;
+  outline: none; }
+
+li {
+  list-style: none;
+  outline: none; }
+
+img {
+  outline: none; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -30,7 +41,7 @@ h6 {
   position: relative;
   padding: 52px 227px 0;
   color: white; }
-  .header__top {
+  .header__nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -39,9 +50,15 @@ h6 {
             justify-content: space-between;
     margin-bottom: 164px; }
   .header__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 360px; }
   .header__heading {
-    max-width: 490px;
     font-size: 64px;
     line-height: 68px;
     letter-spacing: -2px;
@@ -51,7 +68,7 @@ h6 {
   .header__info {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
-    margin-bottom: 56px; }
+    margin-bottom: 83px; }
 
 .nav {
   text-transform: uppercase;
@@ -68,12 +85,13 @@ h6 {
     margin-left: auto;
     margin-right: 0; }
   .nav__link {
+    position: relative;
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 3px;
-    cursor: url("../images/cursor/cursor.png"), auto; }
+    cursor: pointer; }
     .nav__link:hover {
       color: #ff9c8e;
       -webkit-transition: color 0.3s;
@@ -86,14 +104,6 @@ h6 {
       height: 2px;
       border-radius: 4px;
       background-color: #ff9c8e; }
-
-.logo {
-  width: 60px;
-  height: 28px;
-  background-image: url(../images/logo/Air.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; }
 
 .slider {
   position: absolute;
@@ -112,11 +122,13 @@ h6 {
     background-color: white;
     position: absolute;
     bottom: 66px;
-    cursor: url("../images/cursor/cursor.png"), auto; }
-    .slider__button:focus {
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: scale, 0.3s;
+    transition: scale, 0.3s; }
+    .slider__button:hover {
       -webkit-transform: scale(0.9);
-              transform: scale(0.9);
-      outline: none; }
+              transform: scale(0.9); }
     .slider__button--backward {
       left: 42px; }
     .slider__button--forward {
@@ -146,15 +158,37 @@ h6 {
   color: white;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
-  cursor: url("../images/cursor/cursor.png"), auto;
+  cursor: pointer;
   outline: none; }
   .button:hover {
-    background-color: white;
-    color: #ff9c8e; }
+    background-color: #ff7e6c; }
+
+.about {
+  max-width: 754px;
+  margin: 148px auto; }
+  .about__heading {
+    font-size: 32px;
+    font-weight: 600; }
+  .about__info {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #6c788b; }
+
+.experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white; }
+  .experience__heading {
+    margin-top: 128px;
+    font-size: 52px;
+    font-weight: 600; }
 
 body {
-  background: #e5e5e5;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  background: #e5e5e5; }
 
 /*# sourceMappingURL=main.css.map */
