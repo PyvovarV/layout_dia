@@ -180,17 +180,19 @@ img {
             box-shadow: 0 0 5px #ff7e6c;
     opacity: 0.8; }
 
-.about {
+.about__wrapper {
   max-width: 754px;
   margin: 148px auto; }
-  .about__heading {
-    font-size: 32px;
-    font-weight: 600; }
-  .about__info {
-    font-family: "Open Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #6c788b; }
+
+.about__heading {
+  font-size: 32px;
+  font-weight: 600; }
+
+.about__info {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #6c788b; }
 
 .experience {
   display: -webkit-box;
@@ -492,26 +494,38 @@ img {
   height: 494px;
   border-radius: 24px;
   position: relative; }
-  .person__decor {
-    width: 139px;
-    height: 56px;
-    border-radius: 500px;
-    position: absolute;
-    -webkit-transform: rotate(-60deg);
-            transform: rotate(-60deg); }
-    .person__decor--left {
-      top: 17%;
+  .person__photo-wrapper {
+    position: relative;
+    width: 100%; }
+    .person__photo-wrapper::before {
+      content: "";
+      width: 139px;
+      height: 56px;
+      position: absolute;
+      background-color: black;
+      -webkit-transform: rotate(-60deg);
+              transform: rotate(-60deg);
+      border-radius: 500px;
+      top: 85px;
       left: 40px; }
-    .person__decor--right {
-      top: 34%;
+    .person__photo-wrapper::after {
+      content: "";
+      width: 139px;
+      height: 56px;
+      position: absolute;
+      background-color: black;
+      -webkit-transform: rotate(-60deg);
+              transform: rotate(-60deg);
+      border-radius: 500px;
+      bottom: 117px;
       right: 40px; }
-    .person__decor--blue {
+    .person__photo-wrapper--blue::before, .person__photo-wrapper--blue::after {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0))), #56ccf2;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #56ccf2; }
-    .person__decor--yellow {
+    .person__photo-wrapper--yellow::before, .person__photo-wrapper--yellow::after {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0))), #fcc304;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #fcc304; }
-    .person__decor--red {
+    .person__photo-wrapper--red::before, .person__photo-wrapper--red::after {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0))), #f25656;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #f25656; }
   .person__photo {
@@ -520,7 +534,11 @@ img {
     border-radius: 50%;
     margin-top: 85px;
     margin-bottom: 111px;
-    z-index: 1; }
+    position: relative;
+    z-index: 1;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .person__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -662,6 +680,138 @@ img {
     border-color: #f36363; }
   .ellipse--purple {
     border-color: #bb32ff; }
+
+.footer {
+  position: relative;
+  margin-top: -200px;
+  background-color: #008aff;
+  border-top-right-radius: 200px;
+  padding: 180px 227px 0; }
+  .footer__logo {
+    margin-left: 0;
+    margin-right: auto; }
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 80px; }
+  .footer__nav-item:not(:last-child) {
+    margin-right: 64px;
+    margin-left: 0; }
+
+.communication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 120px; }
+  .communication__heading {
+    font-weight: 600;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 56px; }
+  .communication__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .communication__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+    width: 460px; }
+  .communication__subheading {
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 8px; }
+  .communication__info {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 48px; }
+  .communication__link:nth-child(2) {
+    margin: 0 32px; }
+  .communication__icon {
+    -webkit-transition: scale, 0.3s;
+    transition: scale, 0.3s; }
+    .communication__icon:hover {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 460px; }
+  .form__heading {
+    font-weight: 600;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px; }
+  .form__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    color: white; }
+    .form__input--textarea {
+      margin-bottom: 80px;
+      overflow: hidden; }
+
+.input {
+  font-size: 15px;
+  font-weight: 600;
+  height: 56px;
+  background-color: inherit;
+  border-bottom: 1px solid white;
+  padding: 17px 0;
+  outline: none; }
+  .input:focus {
+    border-bottom: 2px solid white; }
+  .input::-webkit-input-placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    opacity: 0.7; }
+  .input::-moz-placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    opacity: 0.7; }
+  .input:-ms-input-placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    opacity: 0.7; }
+  .input::-ms-input-placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    opacity: 0.7; }
+  .input::placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    opacity: 0.7; }
 
 body {
   background: #e5e5e5; }
